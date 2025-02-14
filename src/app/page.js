@@ -1,11 +1,12 @@
-import Image from "next/image";
+// import Image from "next/image";
+import AboutUsPage from "./components/aboutUs/page";
+import BannerPage from "./components/banner/page";
 
 export default function Home() {
   return (
-    <div>
-      <h1 className="text-2xl">
-        Hello Nextjs
-      </h1>
+    <div className="">
+      <BannerPage></BannerPage>
+      <AboutUsPage></AboutUsPage>
     </div>
   );
 }
