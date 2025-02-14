@@ -14,19 +14,22 @@ export default function BannerPage() {
       image: banner1,
       alt: "Living Room",
       title: "Modern Living Room Design",
-      description: "Experience the elegance of modern living room designs tailored to your lifestyle.",
+      description:
+        "Experience the elegance of modern living room designs tailored to your lifestyle.",
     },
     {
       image: banner2,
       alt: "Golden Canopy",
       title: "Luxurious Bedroom Interiors",
-      description: "Transform your bedroom into a luxurious retreat with our bespoke interior solutions.",
+      description:
+        "Transform your bedroom into a luxurious retreat with our bespoke interior solutions.",
     },
     {
       image: banner3,
       alt: "Urban Exploration",
       title: "Contemporary Kitchen Spaces",
-      description: "Discover the perfect blend of functionality and style in our contemporary kitchen designs.",
+      description:
+        "Discover the perfect blend of functionality and style in our contemporary kitchen designs.",
     },
   ];
 
@@ -57,13 +60,18 @@ export default function BannerPage() {
           <Image
             src={slide.image}
             alt={slide.alt}
-            className="h-full w-full object-cover"
+            className="w-full h-full object-cover"
             priority // Preload the first image for better performance
           />
+
           {/* Text Overlay */}
           <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/50 text-white text-center p-5">
-            <h1 className="text-7xl font-bold mb-4">{slide.title}</h1>
-            <p className="text-xl max-w-2xl">{slide.description}</p>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4">
+              {slide.title}
+            </h1>
+            <p className="text-lg sm:text-xl md:text-2xl max-w-2xl">
+              {slide.description}
+            </p>
           </div>
         </div>
       ))}
@@ -83,21 +91,17 @@ export default function BannerPage() {
 
       {/* Previous and Next Buttons */}
       <button
-        className="absolute left-5 top-1/2 -translate-y-1/2 rounded-full bg-black/50 p-2 text-white"
+        className="absolute left-5 top-1/2 -translate-y-1/2 rounded-full bg-black/50 p-2 text-white hover:bg-black/70 transition-colors"
         onClick={() =>
-          setCurrentSlide((prev) =>
-            prev === 0 ? slides.length - 1 : prev - 1
-          )
+          setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1))
         }
       >
         &lt; {/* Left arrow */}
       </button>
       <button
-        className="absolute right-5 top-1/2 -translate-y-1/2 rounded-full bg-black/50 p-2 text-white"
+        className="absolute right-5 top-1/2 -translate-y-1/2 rounded-full bg-black/50 p-2 text-white hover:bg-black/70 transition-colors"
         onClick={() =>
-          setCurrentSlide((prev) =>
-            prev === slides.length - 1 ? 0 : prev + 1
-          )
+          setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1))
         }
       >
         &gt; {/* Right arrow */}
@@ -105,5 +109,3 @@ export default function BannerPage() {
     </div>
   );
 }
-
-

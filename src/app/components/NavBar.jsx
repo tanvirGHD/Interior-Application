@@ -17,12 +17,6 @@ export default function NavBar() {
                <Link href="/portfolio">
                <li>PORTFOLIO</li>
                </Link>
-               <Link href="/news">
-               <li>NEWS</li>
-               </Link>
-               <Link href="/contact">
-               <li>CONTACT</li>
-               </Link>
           </ul>
       </nav>
     </div>
