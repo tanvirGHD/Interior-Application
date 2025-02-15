@@ -48,7 +48,7 @@ export default function BannerPage() {
   };
 
   return (
-    <div className="relative h-[650px] w-full overflow-hidden">
+    <div className="relative h-[650px] w-full overflow-hidden rounded-b-lg ">
       {/* Carousel Slides */}
       {slides.map((slide, index) => (
         <div
