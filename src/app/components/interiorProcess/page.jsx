@@ -1,4 +1,6 @@
-"use client"; // Ensure this is a client component
+"use client"; 
+
+
 import React from "react";
 import { motion } from "framer-motion"; // Import Framer Motion
 import { FaLightbulb, FaPalette, FaTools } from "react-icons/fa"; 
@@ -39,7 +41,7 @@ export default function InteriorProcess() {
           </motion.h2>
           <motion.p
             variants={fadeInUp}
-            className="text-sm text-gray-600 max-w-2xl mx-auto"
+            className="text-sm text-[#ccaf8d] max-w-2xl mx-auto"
           >
             Transforming a space involves understanding and applying key design
             principles to create a harmonious and functional environment.

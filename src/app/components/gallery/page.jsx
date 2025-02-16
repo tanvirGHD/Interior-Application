@@ -53,7 +53,7 @@ export default function OurGalleryPage() {
           </motion.h2>
           <motion.p
             variants={fadeInUp}
-            className="text-sm text-gray-600 max-w-2xl mx-auto"
+            className="text-sm text-[#ccaf8d] max-w-2xl mx-auto"
           >
             Explore our stunning collection of interior design projects that
             showcase our creativity and expertise.

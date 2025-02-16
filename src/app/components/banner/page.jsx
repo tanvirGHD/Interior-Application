@@ -48,7 +48,7 @@ export default function BannerPage() {
   };
 
   return (
-    <div className="relative h-[650px] w-full overflow-hidden rounded-b-lg ">
+    <div className="relative h-[700px] w-full overflow-hidden rounded-b-lg ">
       {/* Carousel Slides */}
       {slides.map((slide, index) => (
         <div
@@ -65,7 +65,7 @@ export default function BannerPage() {
           />
 
           {/* Text Overlay */}
-          <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/50 text-white text-center p-5">
+          <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/3 0 text-white text-center p-5">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4">
               {slide.title}
             </h1>

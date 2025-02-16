@@ -31,7 +31,7 @@ export default function AboutUsPage() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.7, duration: 1 }}
-          className="text-center text-xs text-gray-500 mb-12"
+          className="text-center text-sm text-[#ccaf8d] mb-12"
         >
           We are a passionate team dedicated to creating stunning interiors.
         </motion.p>

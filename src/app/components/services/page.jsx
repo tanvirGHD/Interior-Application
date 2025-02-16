@@ -78,7 +78,7 @@ export default function ServicesPage() {
           />
           <motion.p
             variants={fadeInUp}
-            className="text-xs text-gray-600 max-w-2xl mx-auto"
+            className="text-sm text-[#ccaf8d] max-w-2xl mx-auto"
           >
             We turn your interior design dreams into reality with our
             specialized touch in elegant and functional spaces.
