@@ -1,7 +1,8 @@
-"use client"
+"use client";
 import React, { useState } from "react";
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaClock } from "react-icons/fa";
 
-export default function ContactForm() {
+export default function ContactPage() {
   // State to manage form inputs
   const [formData, setFormData] = useState({
     name: "",
@@ -41,12 +42,60 @@ export default function ContactForm() {
         Get In Touch
       </h2>
 
-      {/* Contact Form */}
-      <div className="container mx-auto px-4 max-w-3xl">
+      {/* Two-Column Layout */}
+      <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Left Column: Office Information */}
+        <div className="bg-white rounded-lg shadow-lg p-8">
+        <h3 className="text-2xl font-semibold text-gray-800 mb-6 flex items-center">
+            <FaMapMarkerAlt className="text-[#C89756] mr-2" /> Our Office
+          </h3>
+          <p className="text-gray-600 mb-4 flex items-center">
+            <FaMapMarkerAlt className="text-[#C89756] mr-2" />
+            <span>
+              <strong>Address:</strong> 123 Design Lane, Creative City, Country
+            </span>
+          </p>
+          <p className="text-gray-600 mb-4 flex items-center">
+            <FaPhoneAlt className="text-[#C89756] mr-2" />
+            <span>
+              <strong>Phone:</strong> +1 (234) 567-890
+            </span>
+          </p>
+          <p className="text-gray-600 mb-4 flex items-center">
+            <FaEnvelope className="text-[#C89756] mr-2" />
+            <span>
+              <strong>Email:</strong> info@interiordesign.com
+            </span>
+          </p>
+          <p className="text-gray-600 mb-6 flex items-center">
+            <FaClock className="text-[#C89756] mr-2" />
+            <span>
+              <strong>Hours:</strong> Mon-Fri, 9:00 AM - 6:00 PM
+            </span>
+          </p>
+
+          {/* Google Map Embed */}
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.764018548824!2d-73.99185228460776!3d40.74117077932947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a3f81d547f%3A0x7b0b8b0b8b0b8b0b!2sInterior%20Design%20Office!5e0!3m2!1sen!2sus!4v1697000000000!5m2!1sen!2sus"
+            width="100%"
+            height="300"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+            title="Google Map"
+            className="rounded-lg"
+          ></iframe>
+        </div>
+
+        {/* Right Column: Contact Form */}
         <form
           onSubmit={handleSubmit}
           className="bg-white rounded-lg shadow-lg p-8"
         >
+          <h3 className="text-2xl font-semibold text-gray-800 mb-6">
+            Send Us a Message
+          </h3>
+
           {/* Name Field */}
           <div className="mb-4">
             <label
